@@ -21,11 +21,10 @@ const req = https.request(options, (response) => {
     response.on('end', () => {
 
         const parsedData = JSON.parse(body);
-        // const instructions = parsedData["instructions"]
         fs.writeFile('instructions.md', parsedData["instructions"], (err) =>{
             if (err) throw err;
         })
-        // console.log(typeof parsedData)
+        
     });
 
 
