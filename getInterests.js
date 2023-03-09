@@ -1,7 +1,13 @@
 const https = require('node:https');
 const fs = require('fs');
 
+const options = {
 
+    hostname: 'nc-leaks.herokuapp.com',
+    path: '/api/confidential',
+    method: 'GET',
+
+};
 
 
 function getInterests() {
@@ -19,6 +25,9 @@ function getInterests() {
             return item["username"]
             
         });
+    
+    
+
 
         
         // console.log(northNamesArr);
